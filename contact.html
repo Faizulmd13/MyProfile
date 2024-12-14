@@ -113,7 +113,9 @@
         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function(){
-                emailjs.init("x5slHze11D7IiDwdd");
+                emailjs.init({
+                    publicKey:"x5slHze11D7IiDwdd",
+                });
 
                 const form = document.querySelector(".contact-form");
                 form.addEventListener('submit', function(event){
