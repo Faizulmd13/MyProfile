@@ -1,101 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <style>
-            html, body {
-                height: 100%;
-                margin: 0;
-            }
-
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f4;
-                color: #333;
-                line-height: 1.6;
-                display: flex;
-                flex-direction: column;
-            }
-
-            nav {
-                background: #fff;
-                display: flex;
-                justify-content: left;
-                padding: 0.5rem 0;
-            }
-
-            nav a {
-                color: #444;
-                text-decoration: none;
-                margin: 0 1rem;
-                font-size: 1rem;
-            }
-
-            nav a:hover {
-                text-decoration: underline;
-            }
-
-            .container {
-                width: 80%;
-                margin: auto;
-                overflow: hidden;
-                padding: 2rem;
-                background: #fff;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                flex: 1;
-            }
-
-            .section {
-                margin: 1.5rem 0;
-            }
-
-            .section h2 {
-                font-size: 2rem;
-                color: #555;
-            }
-
-            .section p {
-                margin: 0.5rem 0;
-                font-size: 1rem;
-            }
-
-            footer {
-                text-align: center;
-                padding: 1rem 0;
-                background: #333;
-                color: #fff;
-                margin-top: auto;
-            }
-
-            footer p {
-                margin: 0;
-            }
-        </style>
-    </head>
-
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./index-styles.css" type="text/css">
+</head>
+<body>
+    <div class="navbar">
         <nav>
             <a href="index.html">Home</a>
             <a href="portfolio.html">Portfolio</a>
-            <a href="about.html">About me</a>
             <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
         </nav>
-
-        <div class="container">
-            <div class="section">
-                <h2>Welcome to My Website</h2>
-                <p>Explore my journey, projects, and get in touch to collaborate with me.</p>
+    </div>
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <div class="touch">Explore my journey, projects, and get in <div class="touch-trigger">touch</div> to collaborate with me.
+            <div class="details">
+                <p>Instagram: <a href="https://www.instagram.com/_whois5zul/" target="_blank">_whois5zul</a></p>
+                <p>Linkedin: <a href="www.linkedin.com/in/faizul-mohammed-95a8492a0" target="_blank">Faizul Mohammed</a></p>
             </div>
         </div>
-
-        <footer>
-            <p>&copy; 2024 Faizul Mohammed N> All rights reserved. </p>
-        </footer>
-    </body>
-    
+    </div>
+    <footer>
+        <p>&copy; 2024 Faizul Mohammed N. All rights reserved</p>
+    </footer>
+</body>
 </html>

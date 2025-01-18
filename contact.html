@@ -1,182 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact</title>
-        <style>
-            html, body {
-                height: 100%;
-                margin: 0;
-            }
-            
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f4;
-                color: #333;
-                line-height: 1.6;
-                display: flex;
-                flex-direction: column;
-            }
-
-            nav {
-                background: #fff;
-                display: flex;
-                justify-content: left;
-                padding: 0.5rem 0;
-            }
-
-            nav a {
-                color: #444;
-                text-decoration: none;
-                margin: 0 1rem;
-                font-size: 1rem;
-            }
-
-            nav a:hover {
-                text-decoration: underline;
-            }
-
-            .container {
-                width: 80%;
-                margin: auto;
-                overflow: hidden;
-                padding: 2rem;
-                background: #fff;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                flex: 1;
-            }
-
-            .section {
-                margin: 1.5rem 0;
-            }
-
-            .section h2 {
-                font-size: 2rem;
-                color: #555;
-            }
-
-            .section p {
-                margin: 0.5rem 0;
-                font-size: 1rem;
-            }
-
-            .contact-form {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .contact-form label {
-                font-weight: bold;
-                margin-top: 1rem;
-            }
-
-            .contact-form input,
-            .contact-form textarea {
-                width: 100%;
-                padding: 0.5rem;
-                margin-top: 0.5rem;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
-
-            .contact-form button {
-                margin-top: 1rem;
-                padding: 12px;
-                background-color: #333;
-                color: #fff;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-
-            .contact-form button:hover {
-                background-color: #555;
-            }
-            
-            footer {
-                text-align: center;
-                padding: 1rem 0;
-                background: #333;
-                color: #fff;
-                margin-top: auto;
-            }
-
-            footer p {
-                margin: 0;
-            }
-
-        </style>
-        <script
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./contact-styles.css" type="text/css">
+    <script
         type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-      </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function(){
-                emailjs.init({
-                    publicKey:"x5slHze11D7IiDwdd",
-                });
-
-                const form = document.querySelector(".contact-form");
-                form.addEventListener('submit', function(event){
-                    event.preventDefault();
-
-                    const formData = {
-                        name: document.getElementById("name").value,
-                        email: document.getElementById("email").value
-                    };
-
-                    emailjs
-                        .send("service_muen9gt", "template_m2na7wb", formData)
-                        .then((response) => {
-                            console.log("Success: ", response);
-                            alert("Message sent succesfully!");
-                            form.reset();
-                        })
-                        .catch((error) => {
-                            console.error("Error: ", error);
-                            alert("Failed to send message.");
-                        });
-                    });
-                });
-        </script>
-    </head>
-
-    <body>
+    </script>
+    <script src="./script.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="navbar">
         <nav>
             <a href="index.html">Home</a>
             <a href="portfolio.html">Portfolio</a>
-            <a href="about.html">About me</a>
             <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
         </nav>
+    </div>
+    <div class="container">
+        <h1>Contact me</h1>
+        <p>Feel free to reach out to me for collaboration, questions, or opportunities. Fill out the form below and I’ll get back to you as soon as possible.</p>    
+        <form class="contact-form" action="#" method="post">
 
-        <div class="container">
-            <div class="section">
-                <h2>Contact me</h2>
-                <p>Feel free to reach out to me for collaboration, questions, or opportunities. Fill out the form below and I’ll get back to you as soon as possible.</p>
-                
-                <form class="contact-form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-                    <label for="name">Name: </label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email-id" required>
 
-                    <label for="email">Email: </label>
-                    <input type="email" id="email" name="email" placeholder="Your Email id" required>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
 
-                    <label for="message">Message: </label>
-                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    
-                    <button id="submit" type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-
-        <footer>
-            <p>&copy; 2024 Faizul Mohammed N All rights reserved. </p>
-        </footer>
-    </body>
-    
+            <button type="submit" id="submit">Send Message</button>
+            
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Faizul Mohammed N. All rights reserved</p>
+    </footer>
+</body>
 </html>

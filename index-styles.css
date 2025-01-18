@@ -1,0 +1,105 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    line-height: 1.5;
+}
+
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: right;
+    padding: 16px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 32px 0;
+    background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.6)) ,url(./index-bg.jpg) center/cover;
+    flex: 1;
+}
+
+.container h1 {
+    width: 80%;
+    margin: 1rem 4rem;
+    font-size: 32px;
+}
+
+.touch {
+    width: 80%;
+    margin: 1rem 4rem;
+    font-size: 16px;
+}
+
+.details {
+    width: auto;
+    background: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4));
+    padding: 8px;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s, visibility 0.5s;
+    position: absolute;
+    left: 40%; 
+    top: 28%;
+}
+
+.touch-trigger {
+    color: #ffcc00; 
+    cursor: pointer; 
+    position: relative; 
+}
+
+.touch-trigger {
+    display: inline-block;
+}
+
+.touch-trigger:hover ~ .details{
+    opacity: 1; 
+    visibility: visible;
+}
+
+.details:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+div p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+div p a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
