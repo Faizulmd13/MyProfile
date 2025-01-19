@@ -60,6 +60,7 @@ nav a:hover {
     transition: opacity 1.5s, visibility 0.5s;
     position: absolute;
     left: 280px; 
+    top: auto;
 }
 
 .touch-trigger {
@@ -103,8 +104,12 @@ footer p {
     margin: 0;
 }
 
-@media screen and (max-width: 700px) {
-    .detials {
-        left: auto;
+@media screen and (max-width: 768px) and (min-width: 320px){
+    .touch-trigger {
+        color: #fff; 
+        cursor: default;
+    }
+    .details {
+        display: none;
     }
 }
