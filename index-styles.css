@@ -40,13 +40,13 @@ nav a:hover {
 
 .container h1 {
     width: 80%;
-    margin: 1rem 4rem;
+    margin: 1rem auto;
     font-size: 32px;
 }
 
 .touch {
     width: 80%;
-    margin: 1rem 4rem;
+    margin: 1rem auto;
     font-size: 16px;
 }
 
