@@ -59,8 +59,7 @@ nav a:hover {
     visibility: hidden;
     transition: opacity 1.5s, visibility 0.5s;
     position: absolute;
-    left: 40%; 
-    top: 28%;
+    left: 280px; 
 }
 
 .touch-trigger {
@@ -102,4 +101,10 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .detials {
+        left: auto;
+    }
 }
